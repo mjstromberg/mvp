@@ -6,7 +6,11 @@ rentocracy.config(function($routeProvider) {
   $routeProvider
     .when('/landlords', {
       template: 'landlords/landlords.html',
-      controller: 'landlordsCtrl'
+      controller: 'LandlordsController'
+    })
+    .when('/rentals', {
+      template: 'rentals/rentals.html',
+      controller: 'RentalsController'
     })
     .otherwise('/');
 });
