@@ -6,11 +6,11 @@ angular.module('rentocracy', [
 .config(function($routeProvider) {
   $routeProvider
     .when('/landlords', {
-      template: 'app/landlords/landlords.html',
+      templateUrl: 'app/landlords/landlords.html',
       controller: 'LandlordsController'
     })
     .when('/rentals', {
-      template: 'app/rentals/rentals.html',
+      templateUrl: 'app/rentals/rentals.html',
       controller: 'RentalsController'
     })
     .otherwise('/');
