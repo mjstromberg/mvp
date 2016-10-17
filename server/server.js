@@ -5,8 +5,8 @@ var app = express();
 var port = 8000;
 
 // middleware
-app.use(favicon(__dirname + '/assets/favicon.ico'));
 app.use(express.static(__dirname + '/../client'));
+app.use(favicon(__dirname + '/../client/assets/favicon.ico')); // not routed properly
 
 // add routes here
 app.get('/', function(req, res) {
