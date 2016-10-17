@@ -1,14 +1,16 @@
 angular.module('rentocracy', [
+  'rentocracy.landlords',
+  // 'rentocracy.rentals',
   'ngRoute'
 ])
 .config(function($routeProvider) {
   $routeProvider
     .when('/landlords', {
-      template: 'landlords/landlords.html',
+      template: 'app/landlords/landlords.html',
       controller: 'LandlordsController'
     })
     .when('/rentals', {
-      template: 'rentals/rentals.html',
+      template: 'app/rentals/rentals.html',
       controller: 'RentalsController'
     })
     .otherwise('/');

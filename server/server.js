@@ -6,10 +6,11 @@ var port = 8000;
 
 // middleware
 app.use(favicon(__dirname + '/assets/favicon.ico'));
+app.use(express.static(__dirname + '/../client'));
 
 // add routes here
 app.get('/', function(req, res) {
-  res.send('homepage');
+  res.send('/index.html');
 });
 
 app.listen(port, function() {
