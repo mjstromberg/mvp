@@ -1,0 +1,21 @@
+{
+  "name": "rentocracy",
+  "description": "ratings and review site for landlords and rental properties",
+  "main": "index.js",
+  "authors": [
+    "Michael Stromberg"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mjstromberg/2016-09-mvp",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8"
+  }
+}
