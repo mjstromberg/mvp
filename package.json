@@ -1,0 +1,22 @@
+{
+  "name": "rentocracy",
+  "version": "1.0.0",
+  "description": "ratings and review site for landlords and rental properties",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start my.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjstromberg/2016-09-mvp.git"
+  },
+  "author": "Michael Stromberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjstromberg/2016-09-mvp/issues"
+  },
+  "homepage": "https://github.com/mjstromberg/2016-09-mvp#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
