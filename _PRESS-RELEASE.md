@@ -1,4 +1,28 @@
-# Project Name #
+# Rentocracy #
+
+## Rentocracy levels the playing field for people looking to rent an apartment by providing reviews and ratings about landlords and rentals. ##
+
+## Summary ##
+  > We review everything these days. When we want to check out a restaurant we first visit Yelp to see its ratings. When we want to buy some new gadget, we head to Amazon and read the reviews. However, when we try to find somewhere to live, we don't have a lot of background information. Are the neighbors noisy? Is the landlord overbearing? We don't know ahead of time, but Rentocracy will bridge that knowledge gap.
+
+## Problem ##
+  > Renters have so little information about the place they're about to rent. For something that you pour tons of money into (i.e. paying rent), you're really relying on an incomplete set of information to base your decision.
+
+## Solution ##
+  > Rentocracy cleanly and concisely provides all the ratings and reviews a renter needs to make an informed decision about a landlord or a rental.
+
+## Quote from the Founder ##
+  > "Rentocracy is rentastic!" - Me (just now)
+
+## How to Get Started ##
+  > To get informed, simply browse by city or fill out the search form. To review a landlord or rental, click on the 'Add Review' button and get started.
+
+## Customer Quote ##
+  > "Hello." - Adele
+
+## Closing and Call to Action ##
+  > Visit rentocracy.com to get started!
+
 
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -16,7 +40,7 @@ Oh, and I also like to write press-releases in what I call "Oprah-speak" for mai
 Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
  -->
  
-## Heading ##
+<!-- ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
 
 ## Sub-Heading ##
@@ -42,3 +66,4 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+ -->
