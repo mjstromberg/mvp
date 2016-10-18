@@ -1,3 +1,8 @@
 body {
   font-family: 'Roboto', 'Noto sans', sans-serif;
 }
+
+.submit-button {
+  display: block;
+  margin-top: 15px;
+}
