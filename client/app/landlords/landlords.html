@@ -1,15 +1,17 @@
-<div>
+<div class="container">
   <div class="col s12">
-    <div class="row">
+    <div class="row title-section">
       <h2 class="col s6">Landlords</h2>
       <button class="btn waves-effect waves-light add-review" type="submit" name="action">Add Review
         <i class="material-icons right">rate_review</i>
       </button>
     </div>
   </div>
+  <div class="divider"></div>
+  <br>
   <div class="col s12">
     <div class="row">
-      <div class="col s6">
+      <div class="col s6 card-panel white">
         <h3>Search</h3>
         <form class="col s12" ng-submit="submit(landlord)">
           <div class="row">
@@ -47,17 +49,18 @@
               <label>Number of Reviews (Optional)</label>
             </div>
           </div>
-          <button class="btn waves-effect waves-light" type="submit" name="action">Search
+          <button class="btn waves-effect waves-light submit-search" type="submit" name="action">Search
             <i class="material-icons right">send</i>
           </button>
         </form>
       </div>
-      <div class="col s6">
+      <div class="col s5 push-s1 card-panel white">
         <h3 ng-bind="profileTitle"></h3>
         <div ng-repeat="profile in currentData">
           <img src="assets/empty_prof_pic_male.jpg" alt="profile picture" />
           <h4>{{profile.first_name + ' ' + profile.last_name}}</h4>
         </div>
+        <br>
       </div>
     </div>
   </div>
