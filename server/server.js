@@ -15,17 +15,18 @@ app.get('/', function(req, res) {
 app.get('/api/landlords', function(req, res) {
   var reqQuery = req.query;
   var query = '';
+  console.log('server stars: ', reqQuery.stars);
   if (reqQuery.stars) {
     var query = 'SELECT Landlords.first_name, \
                         Landlords.last_name, \
                         Landlords.stars, \
-                        Landlords.review_count \
+                        Landlords.review_count, \
                         Users.username, \
                         Reviews.review_text \
                 FROM Reviews \
                 INNER JOIN Landlords \
                 ON Reviews.landlord_id = Landlords.id \
-                AND Reviews.stars_landlord => ' + reqQuery.stars + ' \
+                AND Reviews.stars_landlord >= ' + reqQuery.stars + ' \
                 INNER JOIN Users \
                 ON Reviews.user_id = Users.id';
   } else {

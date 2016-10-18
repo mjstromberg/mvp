@@ -5,13 +5,14 @@ angular.module('rentocracy.landlords', [])
   $scope.profileTitle = $scope.isFeatured ? 'Featured' : 'Search Results';
 
   $scope.submit = function(landlord) {
+    console.log('landlord.stars: ', landlord.stars);
     $scope.isFeatured = Object.keys(landlord).length === 0;
     $scope.profileTitle = $scope.isFeatured ? 'Featured' : 'Search Results';
     
     $.ajax({
       url: '/api/landlords',
       type: 'GET',
-      data: landlord.stars,
+      data: {stars: landlord.stars},
       async: false,
       success: function(data, status, jqXHR) {
         console.log('client data: ', data);
