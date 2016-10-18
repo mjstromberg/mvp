@@ -1,4 +1,4 @@
-<div>
+<div ng-controller="rentocracy.landlords">
   <div>
     <h2>Landlords</h2>
     <button>Add Review</button>
@@ -6,7 +6,7 @@
   <div>
     <div>
       <h3>Search</h3>
-      <form id="landlord-search-form">
+      <form id="landlord-search-form" ng-submit="submit()">
         Landlord First Name (Optional):
         <input type="text" name="firstName" placeholder="Ex: Mickey" class="search-input">
         Landlord Last Name (Optional):

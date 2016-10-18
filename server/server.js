@@ -12,6 +12,9 @@ app.use(favicon(__dirname + '/../client/assets/favicon.ico')); // not routed pro
 app.get('/', function(req, res) {
   res.send('/index.html');
 });
+app.get('/landlords', function(req, res) {
+  
+});
 
 app.listen(port, function() {
   console.log('Listening on port: ' + port);
