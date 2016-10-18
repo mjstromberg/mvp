@@ -6,20 +6,20 @@
   <div>
     <div>
       <h3>Search</h3>
-      <form id="landlord-search-form" ng-submit="submit()">
+      <form id="landlord-search-form" ng-submit="submit(landlord)">
         Landlord First Name (Optional):
-        <input type="text" name="firstName" placeholder="Ex: Mickey" class="search-input">
+        <input ng-model="landlord.firstName" type="text" name="firstName" placeholder="Ex: Mickey" class="search-input">
         Landlord Last Name (Optional):
-        <input type="text" name="lastName" placeholder="Ex: Mouse" class="search-input">
+        <input ng-model="landlord.lastName" type="text" name="lastName" placeholder="Ex: Mouse" class="search-input">
         Stars (Optional):
-        <select name="stars" class="search-input" form="landlord-search-form">
+        <select ng-model="landlord.stars" name="stars" class="search-input" form="landlord-search-form">
           <option value="1+" selected>1+</option>
           <option value="2+">2+</option>
           <option value="3+">3+</option>
           <option value="4+">4+</option>
         </select>
         Number of Reviews (Optional):
-        <select name="numberOfReviews" class="search-input" form="landlord-search-form">
+        <select ng-model="landlord.numberOfReviews" name="numberOfReviews" class="search-input" form="landlord-search-form">
           <option value="1+" selected>1+</option>
           <option value="5+">5+</option>
           <option value="10+">10+</option>
