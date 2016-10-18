@@ -3,14 +3,14 @@ angular.module('rentocracy.landlords', [])
 .controller('LandlordsController', ['$scope', function($scope) {
   $scope.submit = function() {
     $.ajax({
-      url: '/landlords',
+      url: '/api/landlords',
       type: 'GET',
       async: false,
       success: function(data, status, jqXHR) {
-        console.log('~~~~~~~~~~~~', data);
+        console.log('client data: ', data);
       },
       error: function(jqXHR, status, error) {
-        console.error(error);
+        console.log('client error: ', error);
       }
     })
 

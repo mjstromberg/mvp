@@ -11,16 +11,17 @@ app.use(express.static(__dirname + '/../client'));
 app.get('/', function(req, res) {
   res.send('/index.html');
 });
-app.get('/landlords', function(req, res) {
+app.get('/api/landlords', function(req, res) {
   db.query('SELECT * FROM Landlords', function(err, rows, fields) {
     if (err) {
-      console.log(err);
+      console.log('server err: ', err);
     } else {
-      console.log('rows: ', rows);
+      console.log('server rows: ', rows);
+      res.send(rows);
     }
   });
-   
-  connection.end();
+  
+  db.end();
 });
 
 app.listen(port, function() {
