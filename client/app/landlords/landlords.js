@@ -7,7 +7,6 @@ angular.module('rentocracy.landlords', [])
       url: '/api/landlords',
       type: 'GET',
       data: landlord,
-      contentType: 'application/json',
       async: false,
       success: function(data, status, jqXHR) {
         console.log('client data: ', data);

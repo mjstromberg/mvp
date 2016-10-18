@@ -12,18 +12,22 @@ app.get('/', function(req, res) {
   res.send('/index.html');
 });
 app.get('/api/landlords', function(req, res) {
-  console.log('server req: ', req._parsedUrl.query);
-  var reqQuery = req._parsedUrl.query;
-  // var query = 'SELECT Landlords.first_name, \
-  //                     Landlords.last_name, \
-  //                     Landlords.stars, \
-  //                     Landlords.review_count \
-  //                     Users.username, \
-  //                     Reviews.review_text \
-  //             FROM Landlords \
-  //             INNER JOIN Users \
-  //             ON ';
-  db.query('SELECT * FROM Landlords', function(err, rows, fields) {
+  var reqQuery = req.query;
+  var query = '';
+  if (reqQuery.stars) {
+    var query = 'SELECT Landlords.first_name, \
+                        Landlords.last_name, \
+                        Landlords.stars, \
+                        Landlords.review_count \
+                        Users.username, \
+                        Reviews.review_text \
+                FROM Landlords \
+                INNER JOIN Users \
+                ON ';
+  } else {
+    query = 'SELECT * FROM Landlords';
+  }
+  db.query(query, function(err, rows, fields) {
     if (err) {
       console.log('server err: ', err);
     } else {
