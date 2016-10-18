@@ -4,19 +4,24 @@
     <meta charset="utf-8" />
     <title>Rentocracy</title>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="lib/materialize/dist/css/materialize.min.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>Rentocracy</h1>
     <nav>
-      <ul>
-        <li><a href="#landlords">Landlords</a></li>
-        <li><a href="#rentals">Rentals</a></li>
-      </ul>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Rentocracy</a>
+        <ul id="nav-mobile" class="right">
+          <li><a href="#landlords">Landlords</a></li>
+          <li><a href="#rentals">Rentals</a></li>
+        </ul>
+      </div>
     </nav>
     <div ng-view></div>
 
     <script src="lib/jQuery/dist/jquery.min.js"></script>
+    <script src="lib/materialize/dist/js/materialize.min.js"></script>
     <script src="lib/angular/angular.min.js"></script>
     <script src="lib/angular-route/angular-route.min.js"></script>
     <script src="app/landlords/landlords.js"></script>
