@@ -11,6 +11,7 @@ app.use(express.static(__dirname + '/../client'));
 app.get('/', function(req, res) {
   res.send('/index.html');
 });
+
 app.get('/api/landlords', function(req, res) {
   var reqQuery = req.query;
   var query = '';
@@ -21,9 +22,12 @@ app.get('/api/landlords', function(req, res) {
                         Landlords.review_count \
                         Users.username, \
                         Reviews.review_text \
-                FROM Landlords \
+                FROM Reviews \
+                INNER JOIN Landlords \
+                ON Reviews.landlord_id = Landlords.id \
+                AND Reviews.stars_landlord => ' + reqQuery.stars + ' \
                 INNER JOIN Users \
-                ON ';
+                ON Reviews.user_id = Users.id';
   } else {
     query = 'SELECT * FROM Landlords';
   }
@@ -39,6 +43,7 @@ app.get('/api/landlords', function(req, res) {
   db.end();
 });
 
+// listen to port
 app.listen(port, function() {
   console.log('Listening on port: ' + port);
 });

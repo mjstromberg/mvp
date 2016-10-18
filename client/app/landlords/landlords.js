@@ -1,12 +1,17 @@
 angular.module('rentocracy.landlords', [])
 
 .controller('LandlordsController', ['$scope', function($scope) {
+  $scope.isFeatured = true;
+  $scope.profileTitle = $scope.isFeatured ? 'Featured' : 'Search Results';
+
   $scope.submit = function(landlord) {
-    console.log('client landlord: ', landlord);
+    $scope.isFeatured = Object.keys(landlord).length === 0;
+    $scope.profileTitle = $scope.isFeatured ? 'Featured' : 'Search Results';
+    
     $.ajax({
       url: '/api/landlords',
       type: 'GET',
-      data: landlord,
+      data: landlord.stars,
       async: false,
       success: function(data, status, jqXHR) {
         console.log('client data: ', data);
@@ -18,8 +23,6 @@ angular.module('rentocracy.landlords', [])
     })
   };
 
-  $scope.isFeatured = true;
-  $scope.profileTitle = $scope.isFeatured ? 'Featured' : 'Search Results';
   
   $scope.featuredProfile = {
     first_name: 'Fakey',
