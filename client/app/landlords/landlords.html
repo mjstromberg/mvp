@@ -29,7 +29,11 @@
       </form>
     </div>
     <div>
-      <h3>Featured</h3>
+      <h3 ng-bind="profileTitle"></h3>
+      <div ng-repeat="profile in currentData">
+        <img src="assets/empty_prof_pic_male.jpg" alt="profile picture" />
+        <h4>{{profile.first_name + ' ' + profile.last_name}}</h4>
+      </div>
     </div>
   </div>
 </div>
