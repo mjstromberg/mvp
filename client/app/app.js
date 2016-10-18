@@ -1,6 +1,6 @@
 angular.module('rentocracy', [
   'rentocracy.landlords',
-  // 'rentocracy.rentals',
+  'rentocracy.rentals',
   'ngRoute'
 ])
 .config(function($routeProvider) {
