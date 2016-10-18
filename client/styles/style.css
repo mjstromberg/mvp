@@ -2,12 +2,7 @@ body {
   font-family: 'Roboto', 'Noto sans', sans-serif;
 }
 
-.submit-button {
-  display: block;
-  margin-top: 15px;
-}
-
-.search-input {
-  display: block;
-  margin-bottom: 15px;
+.btn.add-review {
+  float: right;
+  margin: 30px 15px 0 0;
 }
