@@ -6,12 +6,25 @@
   <div>
     <div>
       <h3>Search</h3>
-      <form>
-        Landlord First Name:<br>
-        <input type="text" name="firstName" placeholder="Ex: Mickey">
-        <br>
-        Landlord Last Name:<br>
-        <input type="text" name="lastName" placeholder="Mouse">
+      <form id="landlord-search-form">
+        Landlord First Name (Optional):
+        <input type="text" name="firstName" placeholder="Ex: Mickey" class="search-input">
+        Landlord Last Name (Optional):
+        <input type="text" name="lastName" placeholder="Ex: Mouse" class="search-input">
+        Stars (Optional):
+        <select name="stars" class="search-input" form="landlord-search-form">
+          <option value="1+" selected>1+</option>
+          <option value="2+">2+</option>
+          <option value="3+">3+</option>
+          <option value="4+">4+</option>
+        </select>
+        Number of Reviews (Optional):
+        <select name="numberOfReviews" class="search-input" form="landlord-search-form">
+          <option value="1+" selected>1+</option>
+          <option value="5+">5+</option>
+          <option value="10+">10+</option>
+          <option value="50+">50+</option>
+        </select>
         <input type="submit" value="Submit" class="submit-button">
       </form>
     </div>

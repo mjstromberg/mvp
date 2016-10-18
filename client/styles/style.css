@@ -6,3 +6,8 @@ body {
   display: block;
   margin-top: 15px;
 }
+
+.search-input {
+  display: block;
+  margin-bottom: 15px;
+}
