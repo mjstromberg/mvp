@@ -1,3 +1,7 @@
+CREATE DATABASE rentocracy;
+
+USE rentocracy;
+
 DROP TABLE IF EXISTS `Reviews`;
     
 CREATE TABLE `Reviews` (
@@ -55,3 +59,6 @@ ALTER TABLE `Reviews` ADD FOREIGN KEY (landlord_id) REFERENCES `Landlords` (`id`
 ALTER TABLE `Reviews` ADD FOREIGN KEY (rental_id) REFERENCES `Rentals` (`id`);
 ALTER TABLE `Reviews` ADD FOREIGN KEY (user_id) REFERENCES `Users` (`id`);
 ALTER TABLE `Rentals` ADD FOREIGN KEY (landlord_id) REFERENCES `Landlords` (`id`);
+
+-- Execute from command line to create the database and the tables:
+--   mysql -u root < server/schema.sql
