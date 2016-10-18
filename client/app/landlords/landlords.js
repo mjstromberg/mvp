@@ -16,7 +16,7 @@ angular.module('rentocracy.landlords', [])
       async: false,
       success: function(data, status, jqXHR) {
         console.log('client data: ', data);
-        $scope.searchResults = data;
+        $scope.currentData = data;
       },
       error: function(jqXHR, status, error) {
         console.log('client error: ', error);
@@ -36,8 +36,6 @@ angular.module('rentocracy.landlords', [])
     date_end: '2011-05-01',
     stars_landlord: 3
   };
-
-  $scope.searchResults = [];
 
   $scope.currentData = $scope.isFeatured ?
     [$scope.featuredProfile] :

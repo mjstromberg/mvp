@@ -60,8 +60,8 @@ ALTER TABLE `Reviews` ADD FOREIGN KEY (rental_id) REFERENCES `Rentals` (`id`);
 ALTER TABLE `Reviews` ADD FOREIGN KEY (user_id) REFERENCES `Users` (`id`);
 ALTER TABLE `Rentals` ADD FOREIGN KEY (landlord_id) REFERENCES `Landlords` (`id`);
 
-INSERT INTO `Users` (username, review_count) VALUES ('me', 1);
-INSERT INTO `Users` (username, review_count) VALUES ('another_user', 1);
+INSERT INTO `Users` (username, review_count) VALUES ('ace_ventura1', 1);
+INSERT INTO `Users` (username, review_count) VALUES ('clean_freak_monica42', 1);
 
 INSERT INTO `Landlords` (first_name, last_name, stars, review_count) VALUES ('Mr.', 'Shickadance', 1, 1);
 INSERT INTO `Landlords` (first_name, last_name, stars, review_count) VALUES ('Mr.', 'Heckles', 3, 1);
@@ -69,8 +69,8 @@ INSERT INTO `Landlords` (first_name, last_name, stars, review_count) VALUES ('Mr
 INSERT INTO `Rentals` (landlord_id, street, city, state, zipcode, stars, review_count) VALUES (1, '124 Fake Street', 'Miami', 'FL', 12345, 2, 1);
 INSERT INTO `Rentals` (landlord_id, street, city, state, zipcode, stars, review_count) VALUES (2, '1 Nice Street', 'New York', 'NY', 45678, 5, 1);
 
-INSERT INTO `Reviews` (landlord_id, rental_id, user_id, review_text, date_start, date_end, stars_landlord, stars_rental) VALUES (1, 1, 1, 'This place smelled like a petting zoo.', '2014-08-01', '2015-08-01', 1, 2);
-INSERT INTO `Reviews` (landlord_id, rental_id, user_id, review_text, date_start, date_end, stars_landlord, stars_rental) VALUES (2, 2, 2, 'The place is huge, and my neighbors are great.', '1999-01-01', '2004-01-01', 3, 5);
+INSERT INTO `Reviews` (landlord_id, rental_id, user_id, review_text, date_start, date_end, stars_landlord, stars_rental) VALUES (1, 1, 1, 'This landlord let me keep all of my animals.', '2014-08-01', '2015-08-01', 1, 2);
+INSERT INTO `Reviews` (landlord_id, rental_id, user_id, review_text, date_start, date_end, stars_landlord, stars_rental) VALUES (2, 2, 2, 'The landlord was okay, but he wouldn\'t fix my furnace.', '1999-01-01', '2004-01-01', 3, 5);
 
 -- Execute from command line to create the database and the tables:
 --   mysql -u root < server/schema.sql
