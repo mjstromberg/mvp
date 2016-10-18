@@ -40,8 +40,6 @@ app.get('/api/landlords', function(req, res) {
       res.send(rows);
     }
   });
-  
-  db.end();
 });
 
 // listen to port
