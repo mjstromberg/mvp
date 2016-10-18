@@ -18,6 +18,8 @@
   "homepage": "https://github.com/mjstromberg/2016-09-mvp#readme",
   "dependencies": {
     "express": "^4.14.0",
+    "mysql": "^2.11.1",
+    "sequelize": "^3.24.4",
     "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
