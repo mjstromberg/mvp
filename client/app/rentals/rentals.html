@@ -1,14 +1,102 @@
-<div>
-  <div>
-    <h2>Rentals</h2>
-    <button>Add Review</button>
-  </div>
-  <div>
-    <div>
-      <h3>Search</h3>
+<div class="container">
+  <div class="col s12">
+    <div class="row title-section">
+      <h2 class="col s6">Rentals</h2>
+      <button class="btn waves-effect waves-light add-review" type="submit" name="action">Add Review
+        <i class="material-icons right">rate_review</i>
+      </button>
     </div>
-    <div>
-      <h3>Featured</h3>
+  </div>
+  <div class="divider"></div>
+  <br>
+  <div class="col s12">
+    <div class="row">
+      <div class="col s6 card-panel white">
+        <h3>Search</h3>
+        <form class="col s12" ng-submit="submit(rental)">
+          <div class="row">
+            <div class="input-field col s12">
+              <input ng-model="rental.street" type="text" id="street" class="search-input">
+              <label for="street">Street Address (Optional)</label>
+            </div>  
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input ng-model="rental.city" type="text" id="city" class="search-input">
+              <label for="city">City (Optional)</label>
+            </div>  
+          </div>
+          <br>
+          <div class="row">
+            <div class="input-field col s6">
+              <select ng-model="rental.stars" form="rental-search-form">
+                <option value="" disabled selected>Choose</option>
+                <!-- <option value="1" data-icon="assets/star_1.svg" class="left">1+ Stars</option> -->
+                <option value="1">1+ Stars</option>
+                <option value="2">2+ Stars</option>
+                <option value="3">3+ Stars</option>
+                <option value="4">4+ Stars</option>
+              </select>
+              <label>Rating (Optional)</label>
+            </div>
+            <div class="input-field col s6">
+              <select ng-model="rental.numberOfReviews" form="rental-search-form">
+                <option value="" disabled selected>Choose</option>
+                <option value="1">1+ Reviews</option>
+                <option value="5">5+ Reviews</option>
+                <option value="10">10+ Reviews</option>
+                <option value="50">50+ Reviews</option>
+              </select>
+              <label>Number of Reviews (Optional)</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <select ng-model="rental.stars" form="rental-search-form">
+                <option value="" disabled selected>Choose</option>
+                <!-- <option value="1" data-icon="assets/star_1.svg" class="left">1+ Stars</option> -->
+                <option value="1">1+ Stars</option>
+                <option value="2">2+ Stars</option>
+                <option value="3">3+ Stars</option>
+                <option value="4">4+ Stars</option>
+              </select>
+              <label>Rating (Optional)</label>
+            </div>
+            <div class="input-field col s6">
+              <select ng-model="rental.numberOfReviews" form="rental-search-form">
+                <option value="" disabled selected>Choose</option>
+                <option value="1">1+ Reviews</option>
+                <option value="5">5+ Reviews</option>
+                <option value="10">10+ Reviews</option>
+                <option value="50">50+ Reviews</option>
+              </select>
+              <label>Number of Reviews (Optional)</label>
+            </div>
+          </div>
+          <button class="btn waves-effect waves-light submit-search" type="submit" name="action">Search
+            <i class="material-icons right">send</i>
+          </button>
+        </form>
+      </div>
+      <div class="col s5 push-s1 card-panel white">
+        <h3 ng-bind="profileTitle"></h3>
+        <div ng-repeat="profile in currentData">
+          <img src="assets/empty_prof_pic_male.jpg" alt="profile picture" />
+          <h4>{{profile.first_name + ' ' + profile.last_name}}</h4>
+          <h5>Stars: {{profile.stars}}</h5>
+          <h5>Reviews: {{profile.review_count}}</h5>
+          <h5>Latest Review:</h5>
+          <p>"{{profile.review_text}}"</p>
+          <p>- {{profile.username}}</p>
+        </div>
+        <br>
+      </div>
     </div>
   </div>
 </div>
+
+<script>
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+</script>
