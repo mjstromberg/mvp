@@ -21,7 +21,7 @@ angular.module('rentocracy.landlords', [])
       error: function(jqXHR, status, error) {
         console.log('client error: ', error);
       }
-    })
+    });
   };
 
   
