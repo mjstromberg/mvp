@@ -24,7 +24,6 @@ angular.module('rentocracy.rentals', [])
     });
   };
 
-  
   $scope.featuredProfile = {
     street: '123 Not Real Street',
     city: 'Fakeville',
@@ -33,7 +32,7 @@ angular.module('rentocracy.rentals', [])
     stars: 3,
     review_count: 1,    
     username: 'satisfied_renter9000',
-    review_text: 'Fakey McLandlord is the best!',
+    review_text: 'This place is in a nice neighborhood and is close to transit.',
     date_start: '2010-05-01',
     date_end: '2011-05-01',
     stars_landlord: 3
