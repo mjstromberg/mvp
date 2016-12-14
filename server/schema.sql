@@ -49,6 +49,7 @@ DROP TABLE IF EXISTS `Users`;
     
 CREATE TABLE `Users` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
+  `email` VARCHAR(50) NOT NULL,
   `username` VARCHAR(30) NOT NULL,
   `review_count` INTEGER NULL DEFAULT 0,
   PRIMARY KEY (`id`)
@@ -60,8 +61,8 @@ ALTER TABLE `Reviews` ADD FOREIGN KEY (rental_id) REFERENCES `Rentals` (`id`);
 ALTER TABLE `Reviews` ADD FOREIGN KEY (user_id) REFERENCES `Users` (`id`);
 ALTER TABLE `Rentals` ADD FOREIGN KEY (landlord_id) REFERENCES `Landlords` (`id`);
 
-INSERT INTO `Users` (username, review_count) VALUES ('ace_ventura1', 1);
-INSERT INTO `Users` (username, review_count) VALUES ('clean_freak_monica42', 1);
+INSERT INTO `Users` (email, username, review_count) VALUES ('ace1@gmail.com', 'ace_ventura1', 1);
+INSERT INTO `Users` (email, username, review_count) VALUES ('monica1@gmail.com', 'clean_freak_monica42', 1);
 
 INSERT INTO `Landlords` (first_name, last_name, stars, review_count) VALUES ('Mr.', 'Shickadance', 1, 1);
 INSERT INTO `Landlords` (first_name, last_name, stars, review_count) VALUES ('Mr.', 'Heckles', 3, 1);
@@ -74,17 +75,3 @@ INSERT INTO `Reviews` (landlord_id, rental_id, user_id, review_text, date_start,
 
 -- Execute from command line to create the database and the tables:
 --   mysql -u root < server/schema.sql
-
-
-
-
-
-
-
-
-
-
-
-
-
-
